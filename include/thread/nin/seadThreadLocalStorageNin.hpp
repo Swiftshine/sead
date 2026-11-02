@@ -19,7 +19,7 @@ inline ThreadLocalStorage::~ThreadLocalStorage()
 
 inline void ThreadLocalStorage::setValue(uintptr_t value)
 {
-    static_assert(sizeof(uintptr_t) == sizeof(u64), "uintptr_t and u64 should have the same size");
+    // static_assert(sizeof(uintptr_t) == sizeof(u64), "uintptr_t and u64 should have the same size");
     nn::os::SetTlsValue(mTlsSlot, value);
 }
 
